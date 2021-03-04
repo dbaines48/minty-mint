@@ -1,0 +1,85 @@
+.card {
+    border-radius: .5rem !important;
+    background-color: #f2e5f2;
+    cursor: pointer;
+    min-width: 214.156px;
+}
+
+.card-title {
+    font-size: 1rem;
+    color: #000;
+}
+
+.card-img-top {
+    border-radius: 100%;
+    width: 35%;
+}
+
+.body-title {
+    text-transform: initial;
+}
+
+.card-footer {
+    background-color: purple;
+    /* border-bottom-left-radius: 5% !important; */
+    /* border-bottom-right-radius: 5% !important; */
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+img.img-tb-project {
+    border-radius: 20%;
+}
+
+.extra-projects {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 25%;
+}
+
+.extra-projects>p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    font-size: 0.7rem !important;
+    font-weight: bold;
+}
+
+.extra-students {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.extra-students>p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    font-size: 0.7rem !important;
+    font-weight: bold;
+}
+
+.btn-outline-secondary {
+    font-size: 0.5rem;
+}
+
+div.instructor-info {
+    background-color: #fff;
+    color: #000 !important;
+    cursor: default !important;
+}
+
+img.img-tb-student {
+    border-radius: 100%;
+}
+
+ul.students-row>.nav-item {
+    margin-left: -3%;
+}

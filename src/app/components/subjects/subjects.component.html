@@ -1,0 +1,76 @@
+<div class="container-fluid pt-3 animated fadeIn fast">
+    <div class="row px-2">
+        <div class="col-md-2">
+            <h5 class="add-option" style="display: table-cell !important;"><i class="fa fa-plus"></i> New Subject</h5>
+        </div>
+        <div class="col-md-9">
+            <h3 class="text-center site-title">Subjects</h3>
+        </div>
+    </div>
+    <div class="row px-2">
+        <div class="col-md-2">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="searchBar" id="searchBar" class="form-control" placeholder="subject search">
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Focus</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Mathematics</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Biology</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Art Theory</label>
+                    </div>
+                    <a class="more-filters">See more</a>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Status</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Available seats</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Fully booked</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">On holiday</label>
+                    </div>
+                    <a class="more-filters">See more</a>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Location</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Kiel, SH</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Stuggart, BW</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">Munich, BY</label>
+                    </div>
+                    <a class="more-filters">See more</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-1" *ngFor="let subject of subjects">
+                        <app-subject [subject]="subject"></app-subject>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

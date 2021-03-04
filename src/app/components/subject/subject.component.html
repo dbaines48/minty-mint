@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="card mb-2" (click)="viewSubject()">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <img class="subject-img img-responsive" src="{{ 'https://picsum.photos/seed/subject_' + subject.id + '/500/300' }}" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <div class="d-flex flex-row">
+                        <div>
+                            <h5 class="card-title mb-0">{{ subject.name }}</h5>
+                            <p class="m0">Instructor name</p>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="btn-group-sm pb-5" role="group">
+                                <div class="mx-1 btn btn-outline-secondary disabled small instructor-info">5 years xp</div>
+                                <div class="mx-1 btn btn-outline-secondary disabled small instructor-info">Energetic</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text">{{ subject.objectives }}</p>
+                    <div class="d-flex flex-row">
+                        <a href="https://www.instagram.com" target="_blank" class="social-link">
+                            <i class="fa fa-instagram mr-3"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="social-link">
+                            <i class="fa fa-twitter mr-3"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-link">
+                            <i class="fa fa-facebook mr-3"></i>
+                        </a>
+                        <a href="https://www.google.com" target="_blank" class="social-link">
+                            <i class="fa fa-globe mr-3"></i>
+                        </a>
+                        <button type="button" class="btn btn-primary btn-sm ml-auto">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

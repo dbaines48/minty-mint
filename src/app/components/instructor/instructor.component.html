@@ -1,0 +1,53 @@
+<div class="col-mb-4 px-1">
+    <div class="card h-100 text-center pt-5" (click)="viewInstructor()">
+        <img src="{{ 'https://picsum.photos/seed/' + instructor.id + '/200' }}" alt="" class="card-img-top mx-auto">
+        <div class="card-body pt-5 pb-1">
+            <h5 class="card-title font-weight-bold">{{ instructor.name }}</h5>
+            <p class="small body-title">Mathematics</p>
+            <div class="btn-group-sm pb-5" role="group">
+                <div class="mx-1 btn btn-outline-secondary disabled small instructor-info">{{ instructor.experience }} years xp</div>
+                <div class="mx-1 btn btn-outline-secondary disabled small instructor-info">Energetic</div>
+            </div>
+        </div>
+        <div class="card-footer pb-5">
+            <p class="footer-title">Students</p>
+            <ul class="nav d-flex flex-row justify-content-center pb-3 students-row">
+                <li class="nav-item">
+
+                    <img class="img-tb-student" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 2) + '/30' }}" alt="">
+                </li>
+                <li class="nav-item">
+                    <img class="img-tb-student" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 3) + '/30' }}" alt="">
+                </li>
+                <li class="nav-item">
+                    <img class="img-tb-student" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 4) + '/30' }}" alt="">
+                </li>
+                <li class="nav-item">
+                    <img class="img-tb-student" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 5) + '/30' }}" alt="">
+                </li>
+                <li class="nav-item">
+                    <div class="extra-students mx-auto text-center">
+                        <p>+ {{ extraStudents }}</p>
+                    </div>
+                </li>
+            </ul>
+            <p class="footer-title">Recent Projects</p>
+            <ul class="nav d-flex flex-row justify-content-center">
+                <li class="nav-item mx-1">
+                    <img class="img-tb-project" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 6) + '/35' }}" alt="">
+                </li>
+                <li class="nav-item mx-1">
+                    <img class="img-tb-project" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 7) + '/35' }}" alt="">
+                </li>
+                <li class="nav-item mx-1">
+                    <img class="img-tb-project" src="{{ 'https://picsum.photos/seed/' + (((instructor.id - 1) * 8) + 8) + '/35' }}" alt="">
+                </li>
+                <li class="nav-item mx-1">
+                    <div class="extra-projects mx-auto text-center">
+                        <p>+ {{ extraProjects }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

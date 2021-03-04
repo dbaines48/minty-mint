@@ -1,0 +1,25 @@
+.instructor-title {
+    color: #000;
+}
+
+.review-name,
+.review-text {
+    color: #fff;
+}
+
+.website-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.instructor-images {
+    border-radius: 5%;
+}
+
+.img-student-review {
+    border-radius: 100%;
+}
+
+.review-card {
+    background-color: purple;
+}
