@@ -1,1 +1,38 @@
-<p>calendar works!</p>
+<div class="container-fluid pt-3 animated fadeIn fast">
+    <div class="row">
+        <div class="col-md-2 pb-1">
+            <h4 class="add-option tbc"><i class="fa fa-plus"></i> New Event</h4>
+        </div>
+        <div class="col-md-10 d-flex flex-row justify-content-between">
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="selectRatio" id="selectRatio" value="option1" checked>
+                    <label class="form-check-label" for="selectRatio">
+                      <h5>Select</h5>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-weight-bold site-title">Calendar</h3>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-link mr-2 calendar-btn">
+                    <i class="fa fa-calendar fa-2x"></i> Day</button>
+                <button type="button" class="btn btn-link mr-2  calendar-btn disabled" disabled>
+                    <i class="fa fa-calendar fa-2x"></i> Week
+                </button>
+                <button type="button" class="btn btn-link calendar-btn disabled" disabled>
+                    <i class="fa fa-calendar fa-2x"></i> Month
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row px-2">
+        <div class="col-md-2">
+            <app-filter [container]="'event'"></app-filter>
+        </div>
+        <div class="col-md-10">
+            <div id="gantt-placeholder"></div>
+        </div>
+    </div>
+</div>

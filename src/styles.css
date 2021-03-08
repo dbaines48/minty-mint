@@ -74,3 +74,7 @@ h4.add-option {
 .back-button {
     color: #31755e
 }
+
+.tbc {
+    display: table-cell !important;
+}

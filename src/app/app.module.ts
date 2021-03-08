@@ -14,6 +14,7 @@ import { InstructorComponent } from './components/instructor/instructor.componen
 import { SubjectComponent } from './components/subject/subject.component';
 import { InstructorViewComponent } from './components/instructor-view/instructor-view.component';
 import { SubjectViewComponent } from './components/subject-view/subject-view.component';
+import { FilterComponent } from './components/shared/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SubjectViewComponent } from './components/subject-view/subject-view.com
     InstructorComponent,
     SubjectComponent,
     InstructorViewComponent,
-    SubjectViewComponent
+    SubjectViewComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

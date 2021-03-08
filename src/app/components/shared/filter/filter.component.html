@@ -1,0 +1,85 @@
+<form>
+    <div class="form-group">
+        <input type="text" name="searchBar" id="searchBar" class="form-control" [placeholder]="setPlaceholder()">
+    </div>
+    <div class="form-group" *ngIf="evaluateFilter('subject')">
+        <label class="font-weight-bold" [innerText]="container == 'instructor' ? 'Subject' : 'Focus'"></label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Mathematics</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Biology</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Art Theory</label>
+        </div>
+        <a class="more-filters">See more</a>
+    </div>
+    <div class="form-group" *ngIf="evaluateFilter('status')">
+        <label class="font-weight-bold">Status</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Available seats</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Fully booked</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">On holiday</label>
+        </div>
+        <a class="more-filters">See more</a>
+    </div>
+    <div class="form-group" *ngIf="evaluateFilter('experience')">
+        <label class="font-weight-bold">Experience</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">0 - 5 years</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">5 - 10 years</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">10 - 15 years</label>
+        </div>
+        <a class="more-filters">See more</a>
+    </div>
+    <div class="form-group" *ngIf="evaluateFilter('time')">
+        <label class="font-weight-bold">Time</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Morning</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">After noon</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Evening</label>
+        </div>
+        <a class="more-filters">See more</a>
+    </div>
+    <div class="form-group">
+        <label class="font-weight-bold">Location</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Kiel, SH</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Stuggart, BW</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Munich, BY</label>
+        </div>
+        <a class="more-filters">See more</a>
+    </div>
+</form>

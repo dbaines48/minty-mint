@@ -1,90 +1,22 @@
 <div class="container-fluid pt-3 animated fadeIn fast">
     <div class="d-flex flex-row justify-content-between">
         <div>
-            <h4 class="add-option" style="display: table-cell !important;"><i class="fa fa-plus"></i> New Instructor</h4>
+            <h4 class="add-option tbc"><i class="fa fa-plus"></i> New Instructor</h4>
         </div>
         <div>
             <h3 class="text-center site-title">Instructors</h3>
         </div>
         <div>
-            <h5 (click)="toggleView()" class="add-option" style="display: table-cell !important;text-align: right;">View <i class="fa fa-columns" *ngIf="currentView == 'columns'"></i><i class="fa fa-th-large" *ngIf="currentView == 'grid'"></i></h5>
+            <h5 (click)="toggleView()" class="add-option text-right tbc">View <i class="fa fa-columns" *ngIf="currentView == 'columns'"></i><i class="fa fa-th-large" *ngIf="currentView == 'grid'"></i></h5>
         </div>
     </div>
     <div class="row px-2">
         <div class="col-md-2">
-            <form>
-                <div class="form-group">
-                    <input type="text" name="searchBar" id="searchBar" class="form-control" placeholder="instructor search">
-                </div>
-                <div class="form-group">
-                    <label class="font-weight-bold">Subject</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Mathematics</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Biology</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Art Theory</label>
-                    </div>
-                    <a class="more-filters">See more</a>
-                </div>
-                <div class="form-group">
-                    <label class="font-weight-bold">Status</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Available seats</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Fully booked</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">On holiday</label>
-                    </div>
-                    <a class="more-filters">See more</a>
-                </div>
-                <div class="form-group">
-                    <label class="font-weight-bold">Experience</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">0 - 5 years</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">5 - 10 years</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">10 - 15 years</label>
-                    </div>
-                    <a class="more-filters">See more</a>
-                </div>
-                <div class="form-group">
-                    <label class="font-weight-bold">Location</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Kiel, SH</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Stuggart, BW</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">Munich, BY</label>
-                    </div>
-                    <a class="more-filters">See more</a>
-                </div>
-            </form>
+            <app-filter [container]="'instructor'"></app-filter>
         </div>
         <div class="col-md-10">
             <div class="row row-cols-5" *ngIf="!loading">
-                <app-instructor *ngFor="let instructor of instructors" [instructor]="instructor"></app-instructor>
+                <app-instructor *ngFor="let instructor of instructors" [instructor]="instructor" (click)="viewInstructor(instructor.id)"></app-instructor>
             </div>
         </div>
     </div>

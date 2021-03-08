@@ -1,14 +1,14 @@
 <div class="row">
-    <div class="card mb-2" (click)="viewSubject()">
+    <div class="card mb-2">
         <div class="row no-gutters">
             <div class="col-md-6">
-                <img class="subject-img img-responsive" src="{{ 'https://picsum.photos/seed/subject_' + subject.id + '/500/300' }}" alt="">
+                <img class="subject-img img-responsive" src="{{ 'https://picsum.photos/seed/subject_' + subject.id + '/500/300' }}" (click)="viewSubject()" alt="">
             </div>
             <div class="col-md-6">
                 <div class="card-body">
                     <div class="d-flex flex-row">
                         <div>
-                            <h5 class="card-title mb-0">{{ subject.name }}</h5>
+                            <h5 class="card-title mb-0" (click)="viewSubject()">{{ subject.name }}</h5>
                             <p class="m0">Instructor name</p>
                         </div>
                         <div class="ml-auto">

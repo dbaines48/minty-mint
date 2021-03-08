@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { Instructor } from 'src/app/models/instructor';
 import { DatabaseService } from 'src/app/services/database.service';
 
@@ -13,7 +15,10 @@ export class InstructorsComponent implements OnInit {
   loading:boolean = true;
   currentView = 'columns';
 
-  constructor(private dbs: DatabaseService) { 
+  constructor(private dbs: DatabaseService, 
+              private titleService: Title,
+              private router: Router) {
+    this.titleService.setTitle('Instructors | Minty Mint'); 
     this.dbs.getInstructors()
       .subscribe((instructors: Instructor[]) => {
         this.instructors = instructors;
@@ -23,6 +28,10 @@ export class InstructorsComponent implements OnInit {
       (error: any) => {
         this.loading = false;
       });
+  }
+
+  viewInstructor(id: number){
+    this.router.navigate(['/instructors', id]);
   }
 
   toggleView() {

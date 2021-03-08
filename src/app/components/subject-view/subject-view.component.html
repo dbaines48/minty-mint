@@ -1,1 +1,82 @@
-<p>subject-view works!</p>
+<div class="container-fluid animated fadeIn fast">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-11">
+            <div class="d-flex flex-row">
+                <div class="flex-shrink-1">
+                    <a [routerLink]="['/subjects']" class="back-button">
+                        <i class="fa fa-arrow-left fa-2x"></i>
+                    </a>
+                </div>
+                <div class="w-100">
+                    <h3 class="text-center site-title">{{ subject.name |titlecase }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-11">
+            <div class="row">
+                <div class="col-md-3">
+                    <app-instructor [instructor]="subjectInstructor"></app-instructor>
+                </div>
+                <div class="col-md-4 h-100">
+                    <div class="col-md-12 mb-2 h-50">
+                        <h3 class="subject-title">Synopsis of the subject's objectives and background</h3>
+                        <p class="small text-justify">
+                            {{ subject.objectives }}
+                        </p>
+                        <div class="d-flex flex-row">
+                            <div><strong class="small font-weight-bold">LOREM IPSUM DOLOR AMET CONSECTETUER</strong></div>
+                            <div class="ml-auto">
+                                <a href="https://www.google.com" class="website-link">
+                                    <i class="fa fa-globe ml-1"></i> Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 h-50">
+                        <img class="subject-images" src="{{ 'https://picsum.photos/seed/subject_' + subject.id + '/350/280' }}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 h-100">
+                    <div class="col-md-12 h-50 mb-2">
+                        <!-- <img class="subject-images" src="{{ 'https://picsum.photos/seed/' + (((subject.id - 1) * 500) + 101) + '/350/280' }}" alt=""> -->
+                        <div class="card h-100 pb-5">
+                            <div class="card-body">
+                                <h4>Courseware</h4>
+                                <ul class="courseware-list mt-4">
+                                    <li *ngFor="let course of subject.courseware">{{ course.name }} ({{ course.description }})</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 h-50">
+                        <div class="card h-100 review-card">
+                            <div class="card-body pr-5">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="img-student-review" src="{{ 'https://picsum.photos/seed/' + (((subject.id - 1) * 500) + 102) + '/50' }}" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h4 class="mt-5 review-name">Name surname</h4>
+                                        <p class="review-text text-justify small">
+                                            Student Review, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

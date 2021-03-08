@@ -16,10 +16,6 @@ export class InstructorComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  viewInstructor(){
-    this.router.navigate(['/instructors', this.instructor.id]);
-  }
-
   ngOnInit(): void {
   }
 

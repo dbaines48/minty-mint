@@ -13,11 +13,11 @@ export class SubjectComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
   viewSubject() {
     this.router.navigate(['/subjects', this.subject.id]);
+  }
+
+  ngOnInit(): void {
   }
 
 }

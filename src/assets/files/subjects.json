@@ -15,10 +15,28 @@
         "id": 3,
         "name": "Class 3",
         "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 4,
+        "name": "Class 4",
+        "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 5,
+        "name": "Class 5",
+        "description": "Lorem ipsum dolor sit amet"
+    }],
+    "instructorId": 1,
+    "schedule": [{
+        "id": 1,
+        "startTime": 8,
+        "duration": 120
+    }, {
+        "id": 2,
+        "startTime": 11,
+        "duration": 120
     }]
 }, {
     "id": 2,
-    "name": "Random Subject",
+    "name": "Biology",
     "objectives": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "websiteURL": "https://github.com/dbaines48",
     "courseware": [{
@@ -33,10 +51,28 @@
         "id": 3,
         "name": "Class 3",
         "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 4,
+        "name": "Class 4",
+        "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 5,
+        "name": "Class 5",
+        "description": "Lorem ipsum dolor sit amet"
+    }],
+    "instructorId": 2,
+    "schedule": [{
+        "id": 1,
+        "startTime": 7,
+        "duration": 120
+    }, {
+        "id": 2,
+        "startTime": 12,
+        "duration": 120
     }]
 }, {
     "id": 3,
-    "name": "Random Subject",
+    "name": "Physics",
     "objectives": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "websiteURL": "https://github.com/dbaines48",
     "courseware": [{
@@ -51,10 +87,28 @@
         "id": 3,
         "name": "Class 3",
         "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 4,
+        "name": "Class 4",
+        "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 5,
+        "name": "Class 5",
+        "description": "Lorem ipsum dolor sit amet"
+    }],
+    "instructorId": 3,
+    "schedule": [{
+        "id": 1,
+        "startTime": 7,
+        "duration": 120
+    }, {
+        "id": 2,
+        "startTime": 14,
+        "duration": 120
     }]
 }, {
     "id": 4,
-    "name": "Random Subject",
+    "name": "Grammar",
     "objectives": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "websiteURL": "https://github.com/dbaines48",
     "courseware": [{
@@ -69,10 +123,28 @@
         "id": 3,
         "name": "Class 3",
         "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 4,
+        "name": "Class 4",
+        "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 5,
+        "name": "Class 5",
+        "description": "Lorem ipsum dolor sit amet"
+    }],
+    "instructorId": 4,
+    "schedule": [{
+        "id": 1,
+        "startTime": 10,
+        "duration": 120
+    }, {
+        "id": 2,
+        "startTime": 17,
+        "duration": 120
     }]
 }, {
     "id": 5,
-    "name": "Random Subject",
+    "name": "Geometry",
     "objectives": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "websiteURL": "https://github.com/dbaines48",
     "courseware": [{
@@ -87,5 +159,23 @@
         "id": 3,
         "name": "Class 3",
         "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 4,
+        "name": "Class 4",
+        "description": "Lorem ipsum dolor sit amet"
+    }, {
+        "id": 5,
+        "name": "Class 5",
+        "description": "Lorem ipsum dolor sit amet"
+    }],
+    "instructorId": 5,
+    "schedule": [{
+        "id": 1,
+        "startTime": 10,
+        "duration": 120
+    }, {
+        "id": 2,
+        "startTime": 13,
+        "duration": 120
     }]
 }]
