@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Instructor } from 'src/app/models/instructor';
 import { Subject } from 'src/app/models/subject';
 import { DatabaseService } from 'src/app/services/database.service';
@@ -15,6 +15,7 @@ export class SubjectViewComponent implements OnInit {
   subject: Subject;
   subjectInstructor: Instructor;
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private dbs: DatabaseService,
               private titleService: Title) {
     this.route.params.subscribe( params => {
@@ -37,6 +38,10 @@ export class SubjectViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  navigateToInstructor() {
+    this.router.navigate(['/instructors', this.subjectInstructor.id]);
   }
 
 }

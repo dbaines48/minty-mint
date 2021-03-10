@@ -2,3 +2,30 @@
     color: #31755e;
     text-decoration: none;
 }
+
+.calendar-days {
+    background-color: #f5fbf9;
+}
+
+.cal-day {
+    cursor: pointer;
+}
+
+.cal-day.active {
+    background-color: #58b092;
+    border-radius: 15%;
+}
+
+.cal-day.active>p,
+.cal-day.active>h2 {
+    color: #fff !important;
+}
+
+.cal-day>p,
+.cal-day>h2 {
+    color: #58b092 !important;
+}
+
+text {
+    font-family: Arial, Helvetica, sans-serif !important;
+}

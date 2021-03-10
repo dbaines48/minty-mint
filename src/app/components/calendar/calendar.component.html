@@ -1,5 +1,10 @@
+<div class="d-flex justify-content-center" *ngIf="loading">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
 <div class="container-fluid pt-3 animated fadeIn fast">
-    <div class="row">
+    <div class="row" *ngIf="!loading">
         <div class="col-md-2 pb-1">
             <h4 class="add-option tbc"><i class="fa fa-plus"></i> New Event</h4>
         </div>
@@ -32,6 +37,12 @@
             <app-filter [container]="'event'"></app-filter>
         </div>
         <div class="col-md-10">
+            <div class="calendar-days mb-2" *ngIf="!loading">
+                <div class="cal-day d-inline-block px-3 pt-1" [ngClass]="{'active': isItToday(i)}" *ngFor="let n of getSequence(16); let i = index;">
+                    <p class="text-center mb-0" [innerText]="getNextDate(i) | date: 'EEE'"></p>
+                    <h2 class="text-center" [innerText]="getNextDate(i) | date: 'dd'"></h2>
+                </div>
+            </div>
             <div id="gantt-placeholder"></div>
         </div>
     </div>

@@ -15,16 +15,21 @@ declare var google: any;
 })
 export class CalendarComponent implements OnInit {
 
+  loading: boolean = true;
   subjects: Subject[] = [];
   instructors: Instructor[] = [];
+  startDate: Date = new Date();
+
   constructor(private titleService: Title,
     private dbs: DatabaseService) {
+    this.startDate.setDate(this.startDate.getDate() - 3);
     this.titleService.setTitle('Calendar | Minty Mint');
     this.dbs.getSubjects().subscribe((subs: Subject[]) => {
       if (subs.length > 0)
         this.subjects = subs;
       this.dbs.getInstructors().subscribe((ins: Instructor[]) => {
         this.instructors = ins;
+        this.loading = false;
         google.charts.load('current', { 'packages': ['gantt'] });
         google.charts.setOnLoadCallback(this.drawChart.bind(this));
       });
@@ -32,6 +37,27 @@ export class CalendarComponent implements OnInit {
 
     // google.charts.setOnLoadCallback(this.drawChart);
     // this.drawChart();
+  }
+
+  diff_minutes(dt2, dt1) {
+
+    var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+    diff /= 60;
+    return Math.abs(Math.round(diff));
+
+  }
+
+  getClassPercentage(startDate: Date, duration: number) {
+    let now = new Date();
+    let endDate = new Date(startDate);
+    endDate.setMinutes(endDate.getMinutes() + duration);
+    if (now <= startDate) {
+      return 0;
+    } else if (now >= endDate) {
+      return 100;
+    } else {
+      return this.diff_minutes(now, startDate) * 100 / duration;
+    }
   }
 
   drawChart() {
@@ -58,13 +84,12 @@ export class CalendarComponent implements OnInit {
             date,
             null,
             evt.duration * 60000,
-            100,
+            this.getClassPercentage(date, evt.duration),
             null
           ]
         ]);
       })
     });
-    console.log(otherData);
 
     // otherData.addRows([
     //   ['train1', 'Walk to train stop', 'res1', null, null, 10000, 100, null],
@@ -77,15 +102,64 @@ export class CalendarComponent implements OnInit {
     // ]);
 
     var options = {
-      height: 471,
+      height: 441,
+      colors: ['#556fb5','#4698a7','#9b55b5','#b59b55','#e4508f'],
       gantt: {
-        defaultStartDateMillis: new Date()
+        defaultStartDateMillis: new Date(),
+        labelStyle: {
+          fontName: 'Arial',
+          fontSize: 14,
+          color: '#58b092'
+        },
+        sortTasks: false,
+        palette: [
+          {
+            color: '#556fb5',
+            dark: '#4c63a2',
+            light: '#99a8d2'
+          }, {
+            color: '#4698a7',
+            dark: '#3f8896',
+            light: '#90c1ca'
+          }, {
+            color: '#9b55b5',
+            dark: '#8b4ca2',
+            light: '#c399d2'
+          }, {
+            color: '#b59b55',
+            dark: '#a28b4c',
+            light: '#d2c399'
+          }, {
+            color: '#e4508f',
+            dark: '#cd4880',
+            light: '#ee96bb'
+          }
+        ]
       }
     };
 
     var chart = new google.visualization.Gantt(document.getElementById('gantt-placeholder'));
 
     chart.draw(otherData, options);
+  }
+
+  getSequence(n: number): Array<number> {
+    return Array(n);
+  }
+
+  getNextDate(days: number) {
+    let newDate = new Date(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate());
+    newDate.setDate(newDate.getDate() + days);
+    return newDate;
+  }
+
+  isItToday(days: number): boolean {
+    const today = new Date();
+    let compareDate = new Date(this.startDate.getFullYear(), this.startDate.getMonth(), this.startDate.getDate());
+    compareDate.setDate(compareDate.getDate() + days);
+    return compareDate.getDate() == today.getDate() &&
+      compareDate.getMonth() == today.getMonth() &&
+      compareDate.getFullYear() == today.getFullYear()
   }
 
   ngOnInit(): void {
